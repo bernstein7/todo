@@ -12,8 +12,9 @@ class TasksController < ApplicationController
   end
 
   def update
-    Task.find(params[:id]).update_attributes(task_update_params)
-    head :ok
+    task = Task.find(params[:id])
+    task.update_attributes(task_update_params)
+    render json: { task: task.to_json, errors: task.errors }
   end
 
   def destroy

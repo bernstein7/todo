@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require bootstrap/dist/css/bootstrap
+ *= require editable/bootstrap-editable
  */
 
 .tasks-list {

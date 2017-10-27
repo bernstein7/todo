@@ -15,4 +15,12 @@
 //= require jquery/dist/jquery.min
 //= require bootstrap/dist/js/bootstrap
 //= require jquery-serializejson/jquery.serializejson.min
+//= require editable/bootstrap-editable
+//= require editable/rails
 //= require_tree .
+
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+  }
+});

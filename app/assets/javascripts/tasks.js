@@ -9,6 +9,7 @@ $(document).ready(function() {
         $('#tasks_new').append(response);
         $(form)[0].reset();
         $('input:submit', form).removeAttr('disabled');
+        $('.editable').editable();
       })
   })
 
@@ -26,4 +27,5 @@ $(document).ready(function() {
       });
     }
   }).disableSelection();
+  $('.editable').editable();
 });
