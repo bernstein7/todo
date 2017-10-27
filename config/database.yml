@@ -6,9 +6,10 @@
 #
 default: &default
   adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: <%= ENV['POSTGRES_HOST'] || 'localhost' %>
-  timeout: 5000
 
 development:
   <<: *default
@@ -27,4 +28,6 @@ test:
 
 production:
   <<: *default
-  database: todo_list_production
+  database: todo_production
+  username: todo
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
