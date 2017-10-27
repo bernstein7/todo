@@ -1,0 +1,18 @@
+.col-md-3
+  h3
+    span.label.label-default New
+  ul#tasks_new.connectedSortable.tasks-list  data= { status: 'initial'}
+    - tasks[:initial].each do |task|
+      = render task
+.col-md-3
+  h3
+    span.label.label-primary InProgress
+  ul#tasks_in_progress.connectedSortable.tasks-list data= { status: 'in_progress'}
+    - tasks[:in_progress].each do |task|
+      = render task
+.col-md-3
+  h3
+    span.label.label-success Done
+  ul#tasks_done.connectedSortable.tasks-list  data= { status: 'done'}
+    - tasks[:done].each do |task|
+      = render task

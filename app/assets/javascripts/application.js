@@ -12,4 +12,7 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery/dist/jquery.min
+//= require bootstrap/dist/js/bootstrap
+//= require jquery-serializejson/jquery.serializejson.min
 //= require_tree .

@@ -1,5 +1,14 @@
 {
   "name": "todo_list",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "jquery-serializejson": "^2.8.1",
+    "jquery-ui": "^1.12.1"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dmitriy Kuzminov <clapandslap@gmail.com>",
+  "license": "MIT"
 }

@@ -1,0 +1,11 @@
+li data= { id: task.id, status: task.status }
+  .row
+    .col-md-12
+      .thumbnail
+        .caption
+          h3
+            = task.title
+          p
+            = task.body
+          p
+            = link_to('Delete', task_path(task), method: 'delete', remote: true, class: 'btn btn-danger btn-xs js-delete-link', data: { confirm: 'Are you sure?'} )

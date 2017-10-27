@@ -1,0 +1,12 @@
+.container
+  .row
+    #interactive-board
+      = render 'board', tasks: tasks
+    .col-md-3
+      h3 Add new task
+      = form_for(Task.new, html: { class: 'form-horizontal js-task-create'} ) do |f|
+        .form-group
+          = f.text_field :title, class: 'form-control', placeholder: 'Title here'
+        .form-group
+          = f.text_area :body, class: 'form-control', placeholder: 'Some more info'
+        = f.submit 'Add task', class: 'btn btn-success pull-right'

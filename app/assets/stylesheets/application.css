@@ -12,4 +12,14 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap/dist/css/bootstrap
  */
+
+.tasks-list {
+  padding-left: 0px;
+  min-height: 100px;
+}
+
+.tasks-list li {
+  list-style: none;
+}
